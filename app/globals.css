@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background: radial-gradient(circle at top, #0f172a 0%, #020617 45%, #020617 100%);
+}
+
+.panel {
+  @apply rounded-2xl border border-white/10 bg-white/5 p-6 shadow-xl shadow-black/20;
+}
