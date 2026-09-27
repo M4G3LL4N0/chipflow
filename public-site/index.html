@@ -7,29 +7,42 @@
 <meta name="description" content="Chipflow is a planner for procurement and operations teams. You set chip type, demand, supplier count, region, lead time, and urgency. It returns a risk score, shortage forecast, alternatives, and an action plan — then stores the run so you can compare later."/>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
 <style>
-body { margin:0; background:#07080a; color:#d6ffe4; font:16px/1.5 ui-monospace, monospace; }
-.term { max-width:920px; margin:32px auto; background:#0d1210; border:1px solid #234; border-radius:12px; overflow:hidden; }
-header { display:flex; gap:8px; align-items:center; padding:12px 14px; background:#101816; }
-header i { width:10px; height:10px; border-radius:50%; background:#fb7185; display:block; }
-header span { margin-left:8px; color:#9aa; }
-pre { white-space:pre-wrap; padding:8px 18px 18px; margin:0; }
-.cta { display:inline-block; margin:0 18px 18px; color:#04140c; background:#fb7185; text-decoration:none; padding:8px 12px; }
-#scope { max-width:920px; margin:0 auto 40px; padding:0 8px; }
+body { margin:0; background:#f3f0ea; color:#20242c; font:18px/1.45 Georgia, "Iowan Old Style", serif; }
+.bar { display:flex; justify-content:space-between; padding:20px 28px; border-bottom:1px solid #20242c; }
+.split { display:grid; grid-template-columns: 1.4fr .8fr; min-height:70vh; }
+.split section { padding:48px 28px; }
+aside { background:#fff; border-left:1px solid #20242c; padding:48px 28px; }
+h1 { font-size:clamp(40px, 5vw, 68px); line-height:.95; margin:12px 0 18px; }
+.kicker { letter-spacing:.16em; text-transform:uppercase; font:12px/1 ui-monospace, monospace; color:#b45309; }
+.lede { max-width:38rem; }
+.cta { display:inline-block; margin-top:18px; background:#b45309; color:#f3f0ea; text-decoration:none; padding:12px 16px; font:14px/1 ui-sans-serif, system-ui; }
+ol { list-style:none; padding:0; margin:0; }
+li span { display:block; font:12px/1 ui-monospace, monospace; color:#b45309; }
+.scope { padding:28px; border-top:1px solid #20242c; }
+@media (max-width:700px) { .split { grid-template-columns:1fr; } aside { border-left:0; border-top:1px solid #20242c; } }
 </style>
 </head>
 <body>
 
-<main class="term">
-  <header><i></i><i></i><i></i><span>ChipFlow</span></header>
-  <pre>
-$ status
-maturity  Lab
-claim     Score allocation risk before the shortage becomes a line-down event.
-
-Chipflow is a planner for procurement and operations teams. You set chip type, demand, supplier count, region, lead time, and urgency. It returns a risk score, shortage forecast, alternatives, and an action plan — then stores the run so you can compare later.
-  </pre>
-  <a class="cta" href="#scope">$ read scope</a>
+<header class="bar"><b>ChipFlow</b><span>Lab</span></header>
+<main class="split">
+  <section>
+    <p class="kicker">Public record</p>
+    <h1>Score allocation risk before the shortage becomes a line-down event.</h1>
+    <p class="lede">Chipflow is a planner for procurement and operations teams. You set chip type, demand, supplier count, region, lead time, and urgency. It returns a risk score, shortage forecast, alternatives, and an action plan — then stores the run so you can compare later.</p>
+    <a class="cta" href="#scope">Read the scope</a>
+  </section>
+  <aside>
+    <ol>
+      <li><span>01</span> What it is</li>
+      <li><span>02</span> What it is not</li>
+      <li><span>03</span> What you can do</li>
+    </ol>
+  </aside>
 </main>
-<section id="scope"><h2>scope</h2><ul><li>The page describes the current work. It does not invent customers.</li><li>A live signup, price, or metric appears here only when the product has one.</li><li>Maturity on this page is a label, not a launch claim.</li></ul></section>
+<section id="scope" class="scope">
+  <h2>Scope</h2>
+  <ul><li>The page describes the current work. It does not invent customers.</li><li>A live signup, price, or metric appears here only when the product has one.</li><li>Maturity on this page is a label, not a launch claim.</li></ul>
+</section>
 </body>
 </html>
