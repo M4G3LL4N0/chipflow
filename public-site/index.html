@@ -7,24 +7,47 @@
 <meta name="description" content="Chipflow is a planner for procurement and operations teams. You set chip type, demand, supplier count, region, lead time, and urgency. It returns a risk score, shortage forecast, alternatives, and an action plan — then stores the run so you can compare later."/>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
 <style>
-body { margin:0; background:#0c1220; color:#e0f2fe; font:18px/1.35 "Trebuchet MS", sans-serif; }
-header { display:flex; justify-content:space-between; padding:18px 22px; background:#e0f2fe; color:#0c1220; }
-.ch { display:grid; grid-template-columns:72px 1fr; gap:12px; padding:28px 22px; border-bottom:1px solid #e0f2fe; }
-b { color:#38bdf8; font-size:22px; }
-h1 { margin:0; font-size:clamp(32px, 4vw, 52px); line-height:1; }
-.cta { color:#0c1220; background:#38bdf8; text-decoration:none; padding:12px 14px; display:inline-block; }
-#scope { padding:22px; }
-@media (max-width:600px) { .ch { grid-template-columns:1fr; } }
+*{box-sizing:border-box}
+html,body{max-width:100%;overflow-x:hidden}
+h1,h2,p,li,a{overflow-wrap:anywhere}
+
+body { margin:0; background:#f3f0ea; color:#20242c; font:18px/1.45 Georgia, "Iowan Old Style", serif; }
+.bar { display:flex; justify-content:space-between; padding:20px 28px; border-bottom:1px solid #20242c; }
+.split { display:grid; grid-template-columns: minmax(0,1.4fr) minmax(0,.8fr); min-height:70vh; }
+.split section { padding:48px 28px; }
+aside { background:#fff; border-left:1px solid #20242c; padding:48px 28px; }
+h1 { font-size:clamp(40px, 5vw, 68px); line-height:.95; margin:12px 0 18px; }
+.kicker { letter-spacing:.16em; text-transform:uppercase; font:12px/1 ui-monospace, monospace; color:#b45309; }
+.lede { max-width:38rem; }
+.cta { display:inline-block; margin-top:18px; background:#b45309; color:#f3f0ea; text-decoration:none; padding:12px 16px; font:14px/1 ui-sans-serif, system-ui; }
+ol { list-style:none; padding:0; margin:0; }
+li span { display:block; font:12px/1 ui-monospace, monospace; color:#b45309; }
+.scope { padding:28px; border-top:1px solid #20242c; }
+@media (max-width:700px) { .split { grid-template-columns:1fr; } aside { border-left:0; border-top:1px solid #20242c; } }
+
 </style>
 </head>
 <body>
 
-<main class="chapters">
-  <header><span>ChipFlow</span><span>Lab</span></header>
-  <section class="ch"><b>01</b><h1>Score allocation risk before the shortage becomes a line-down event.</h1></section>
-  <section class="ch"><b>02</b><p>Chipflow is a planner for procurement and operations teams. You set chip type, demand, supplier count, region, lead time, and urgency. It returns a risk score, shortage forecast, alternatives, and an action plan — then stores the run so you can compare later.</p></section>
-  <section class="ch"><b>03</b><a class="cta" href="#scope">Read what is withheld</a></section>
+<header class="bar"><b>ChipFlow</b><span>Lab</span></header>
+<main class="split">
+  <section>
+    <p class="kicker">Public record</p>
+    <h1>Score allocation risk before the shortage becomes a line-down event.</h1>
+    <p class="lede">Chipflow is a planner for procurement and operations teams. You set chip type, demand, supplier count, region, lead time, and urgency. It returns a risk score, shortage forecast, alternatives, and an action plan — then stores the run so you can compare later.</p>
+    <a class="cta" href="#scope">Read the scope</a>
+  </section>
+  <aside>
+    <ol>
+      <li><span>01</span> What it is</li>
+      <li><span>02</span> What it is not</li>
+      <li><span>03</span> What you can do</li>
+    </ol>
+  </aside>
 </main>
-<section id="scope"><ul><li>The page describes the current work. It does not invent customers.</li><li>A live signup, price, or metric appears here only when the product has one.</li><li>Maturity on this page is a label, not a launch claim.</li></ul></section>
+<section id="scope" class="scope">
+  <h2>Scope</h2>
+  <ul><li>The page describes the current work. It does not invent customers.</li><li>A live signup, price, or metric appears here only when the product has one.</li><li>Maturity on this page is a label, not a launch claim.</li></ul>
+</section>
 </body>
 </html>
