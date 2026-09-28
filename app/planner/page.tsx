@@ -88,7 +88,7 @@ export default function PlannerPage() {
           <p className="text-sm text-slate-300">Run the dashboard to view risk score, shortage forecast, alternatives, and action plan.</p>
         ) : (
           <>
-            <p className="text-xs uppercase tracking-[0.16em] text-slate-400">Model sketch · not a live fab feed{runId ? " · saved" : " · not saved"}</p>
+            <p className="text-xs uppercase tracking-[0.16em] text-slate-400">{runId ? "Saved plan" : "Draft plan"}</p>
             <p className="text-3xl font-semibold text-cyan-300">Risk {result.allocationRisk}/100</p>
             <p className="text-sm text-slate-300">{result.executiveSummary}</p>
             <p className="rounded-lg border border-white/15 bg-slate-900/60 p-3 text-sm text-slate-200">{result.shortageForecast}</p>
