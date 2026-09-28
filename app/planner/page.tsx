@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { SubpageVisual } from "@/components/SubpageVisual";
 import { useRouter } from "next/navigation";
+import { runAllocation } from "@/lib/engine";
 import { CHIP_TYPE, DEMAND, LEAD_TIME, REGION, SUPPLIER_COUNT, URGENCY, type AllocationInput, type AllocationResult } from "@/lib/types";
 
 const initial: AllocationInput = {
@@ -34,18 +35,20 @@ export default function PlannerPage() {
     e.preventDefault();
     setLoading(true);
     try {
+      const sketch = runAllocation(form);
+      setResult(sketch);
+      setRunId(null);
       const res = await fetch("/api/allocation", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
       const data = await res.json();
-      if (!res.ok) throw new Error(data.error ?? "Failed");
-      setResult(data.result);
-      setRunId(data.id);
-    } catch (err) {
-      console.error(err);
-      alert("Could not generate allocation plan.");
+      if (!res.ok) return;
+      setResult(data.result ?? sketch);
+      setRunId(data.id ?? null);
+    } catch {
+      // The sketch above still stands when the save API is unavailable.
     } finally {
       setLoading(false);
     }
@@ -85,6 +88,7 @@ export default function PlannerPage() {
           <p className="text-sm text-slate-300">Run the dashboard to view risk score, shortage forecast, alternatives, and action plan.</p>
         ) : (
           <>
+            <p className="text-xs uppercase tracking-[0.16em] text-slate-400">Model sketch · not a live fab feed{runId ? " · saved" : " · not saved"}</p>
             <p className="text-3xl font-semibold text-cyan-300">Risk {result.allocationRisk}/100</p>
             <p className="text-sm text-slate-300">{result.executiveSummary}</p>
             <p className="rounded-lg border border-white/15 bg-slate-900/60 p-3 text-sm text-slate-200">{result.shortageForecast}</p>
