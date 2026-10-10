@@ -1,122 +1,95 @@
-# Chipflow
+# chipflow
 
-<p align="center">
-  <picture>
-    <source media="(prefers-reduced-motion: reduce)" srcset="assets/hero/hero-reduced.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/hero/hero-light.svg">
-    <img src="assets/hero/hero-motion.svg" alt="ChipFlow — animated project plate showing request &rarr; authenticate &rarr; authorise &rarr; record &rarr; reject. Motion depicts this project's real state transition." width="100%">
-  </picture>
-</p>
+> Workflow intelligence for chip design, supply, and hardware iteration. Built in Prisma, Zod. 19 routes (/about, /api/allocation, /contact); 1 entry point (index.html). PROTOTYPE. No test suite committed.
 
-<p align="center">
-  <picture>
-    <source media="(prefers-reduced-motion: reduce)" srcset="assets/hero/computational-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/hero/computational-light.svg">
-    <img src="assets/hero/computational-motion.svg" alt="State machine: request &rarr; authenticate &rarr; authorise &rarr; record &rarr; reject." width="100%">
-  </picture>
-</p>
+The implementation summary below is intentionally conservative. Claims from NORTHSTAR are not presented as shipped functionality.
 
-Real-time allocation, logistics, and risk monitoring MVP for semiconductor buyers and manufacturers.
+- [GitHub repository](https://github.com/M4G3LL4N0/chipflow)
+- [Project site](https://chipflow-public.vercel.app/)
 
-## Stack
-- Next.js 16 (App Router) + TypeScript
-- Tailwind CSS v4
-- Prisma + SQLite
-- pnpm
+<!-- NOAERTH_IMAGE_SLOT: chipflow/hero -->
 
-## Routes
-- `/` product overview
-- `/planner` semiconductor supply dashboard
-- `/dashboard` allocation tracker
-- `/dashboard/runs/[id]` run detail
-- `/pricing` enterprise pricing
+## What it is
 
-## Commands
-- `pnpm install`
-- `pnpm dev`
-- `pnpm build`
-- `pnpm db:push`
+Workflow intelligence for chip design, supply, and hardware iteration. Built in Prisma, Zod. 19 routes (/about, /api/allocation, /contact); 1 entry point (index.html). PROTOTYPE. No test suite committed.
 
-<!-- TRILLIONX:presentation:begin -->
+This repository is part of the NOAERTH venture ecosystem. The current public-facing evidence identifies it as a prototype / active development rather than a production-ready system.
 
-### Animated surfaces
+## Capabilities
 
-Generated from this repository's own source tree: every count, route and module below was measured, not written by hand.
+### Available evidence
 
-#### Identity
+- The repository contains the implementation and documentation associated with the project description above.
+- The technology signals currently visible in the local project are listed in the technical notes below.
+- No additional capability is asserted here without a direct implementation reference.
 
-<picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/chipflow/main/.github-art/surfaces/hero-reduced.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/chipflow/main/.github-art/surfaces/hero-light.svg">
-  <img alt="Identity diagram for chipflow" src="https://raw.githubusercontent.com/M4G3LL4N0/chipflow/main/.github-art/surfaces/hero-motion.svg">
-</picture>
+### Experimental or planned
 
-#### Entry points
+Roadmap intent is deliberately not represented as shipped functionality. Review NORTHSTAR and source implementation together before adding future-facing claims.
 
-<picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/chipflow/main/.github-art/surfaces/terminal-reduced.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/chipflow/main/.github-art/surfaces/terminal-light.svg">
-  <img alt="Entry points diagram for chipflow" src="https://raw.githubusercontent.com/M4G3LL4N0/chipflow/main/.github-art/surfaces/terminal-motion.svg">
-</picture>
+<!-- NOAERTH_IMAGE_SLOT: chipflow/workflow -->
 
-#### Modules
+## How it works
 
-<picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/chipflow/main/.github-art/surfaces/architecture-reduced.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/chipflow/main/.github-art/surfaces/architecture-light.svg">
-  <img alt="Modules diagram for chipflow" src="https://raw.githubusercontent.com/M4G3LL4N0/chipflow/main/.github-art/surfaces/architecture-motion.svg">
-</picture>
+The current evidence supports a repository-level application or tool workflow, but does not provide enough verified detail in the Part 1 record to publish a component-level architecture diagram. The architecture slot is reserved for a deterministic diagram after the source flow is reviewed.
 
-#### Routes
+<!-- NOAERTH_IMAGE_SLOT: chipflow/architecture -->
 
-<picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/chipflow/main/.github-art/surfaces/data_flow-reduced.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/chipflow/main/.github-art/surfaces/data_flow-light.svg">
-  <img alt="Routes diagram for chipflow" src="https://raw.githubusercontent.com/M4G3LL4N0/chipflow/main/.github-art/surfaces/data_flow-motion.svg">
-</picture>
+## Quick start
 
-#### Composition
+### Prerequisites
 
-<picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/chipflow/main/.github-art/surfaces/component_map-reduced.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/chipflow/main/.github-art/surfaces/component_map-light.svg">
-  <img alt="Composition diagram for chipflow" src="https://raw.githubusercontent.com/M4G3LL4N0/chipflow/main/.github-art/surfaces/component_map-motion.svg">
-</picture>
+- A runtime suitable for `Node.js`.
+- A clean checkout of this repository.
 
-#### Build and tests
+### Install
 
-<picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/chipflow/main/.github-art/surfaces/build-reduced.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/chipflow/main/.github-art/surfaces/build-light.svg">
-  <img alt="Build and tests diagram for chipflow" src="https://raw.githubusercontent.com/M4G3LL4N0/chipflow/main/.github-art/surfaces/build-motion.svg">
-</picture>
+```sh
+pnpm install
+```
 
-#### Identity object
+### Run locally
 
-<picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/chipflow/main/.github-art/surfaces/footer-reduced.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/chipflow/main/.github-art/surfaces/footer-light.svg">
-  <img alt="Identity object diagram for chipflow" src="https://raw.githubusercontent.com/M4G3LL4N0/chipflow/main/.github-art/surfaces/footer-motion.svg">
-</picture>
+```sh
+pnpm run dev
+```
 
-<!-- TRILLIONX:presentation:end -->
+### Build
 
-<!-- TRILLIONX:evidence:begin -->
+```sh
+pnpm run build
+```
 
-## What is measurable here
+Commands are included only when they were detected in the repository manifest; verify environment-specific requirements before deployment.
 
-Generated by `.github-art` from the source tree at publish time.
+## Technical notes
 
-| Signal | Value |
-| --- | --- |
-| HTTP routes | 19 |
-| Entry points | 1 |
-| Module roots | 3 |
-| Test files | 0 |
-| CI workflows | 0 |
-| Distinctive stack | Prisma, Zod |
-| Status | PROTOTYPE |
-| Evidence confidence | E3 |
-| Animated surfaces | 7 |
+- **Primary language:** JavaScript/TypeScript
+- **Runtime:** Node.js
+- **Package manager:** pnpm
+- **Framework and integration signals:** Go, Next.js, Prisma, Rust, Tailwind
+- **Entry-point signals:** package.json
+- **Test evidence:** TEST_PLAN.md
+- **Repository topics:** `react`, `typescript`, `app`, `components`, `dung30n5`, `next-js`, `noaerth`, `prisma`
 
-<!-- TRILLIONX:evidence:end -->
+## Status and roadmap
+
+**Current status:** Prototype / active development.
+
+**Current:** The repository and its documented implementation are available for inspection.
+
+**Next:** Reconcile the README, source behavior, and safe public product language before adding deeper examples or diagrams.
+
+**Future:** Product direction is maintained separately and must not be read as a shipped feature list.
+
+## Contributing and license
+
+Follow the repository's existing contribution and licensing files where present. This README does not invent an open-source license or contribution policy.
+
+## Visual documentation
+
+Image slots are intentionally comments until authentic screenshots, deterministic diagrams, or approved conceptual visuals exist. No absent image file is referenced.
+
+## NOAERTH
+
+[NOAERTH](https://www.noaerth.com) is the venture ecosystem associated with this project.
